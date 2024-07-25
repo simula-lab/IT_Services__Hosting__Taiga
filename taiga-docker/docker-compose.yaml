@@ -15,15 +15,15 @@ x-environment:
   TAIGA_SSL_BY_REVERSE_PROXY: "True"
   TAIGA_SUBPATH: "" # "" or "/subpath"
   # Email settings. Uncomment following lines and configure your SMTP server
-  # EMAIL_BACKEND: "django.core.mail.backends.smtp.EmailBackend"
-  # DEFAULT_FROM_EMAIL: "no-reply@example.com"
-  # EMAIL_USE_TLS: "False"
+  EMAIL_BACKEND: "django.core.mail.backends.smtp.EmailBackend"
+  DEFAULT_FROM_EMAIL: "noreply@simulalab.org"
+  EMAIL_USE_TLS: "True"
   # EMAIL_USE_SSL: "False"
-  # EMAIL_HOST: "smtp.host.example.com"
-  # EMAIL_PORT: 587
-  # EMAIL_HOST_USER: "user"
-  # EMAIL_HOST_PASSWORD: "password"
-  # Rabbitmq settings
+  EMAIL_HOST: "smtp.google.com"
+  EMAIL_PORT: 587
+  EMAIL_HOST_USER: "noreply@simulalab.org"
+  EMAIL_HOST_PASSWORD: ${EMAIL_PASSWORD}
+  # Rabbitmq settings:
   # Should be the same as in taiga-async-rabbitmq and taiga-events-rabbitmq
   RABBITMQ_USER: taiga
   RABBITMQ_PASS: taiga
